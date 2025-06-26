@@ -1,7 +1,8 @@
+import React from 'react';
 import resultColor from '../libs/resultColor';
 const Result = ({result}) => {
   return (
-    <div style={{ color: resultColor(result.result) }}>{result.result}</div>
+    <div className={resultColor(result.result)}>{result.result}</div>
   )
 }
 

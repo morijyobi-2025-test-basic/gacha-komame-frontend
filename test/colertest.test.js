@@ -2,23 +2,23 @@ import { describe, it, expect } from 'vitest';
 import resultColor from '../src/libs/resultColor.js';
 
 describe('resultColor', () => {
-  it('Sなら#ff0000', () => {
-    expect(resultColor('S')).toBe('#ff0000');
+  it('Sならtext-red-500', () => {
+    expect(resultColor('S')).toBe('text-red-500');
   });
 
-  it('Aなら#0000ff', () => {
-    expect(resultColor('A')).toBe('#0000ff');
+  it('Aならtext-blue-500', () => {
+    expect(resultColor('A')).toBe('text-blue-500');
   });
 
-  it('Bなら#00ff00', () => {
-  expect(resultColor('B')).toBe('#00ff00');
+  it('Bならtext-green-500', () => {
+  expect(resultColor('B')).toBe('text-green-500');
   });
 
-  it('Cなら#808080', () => {
-    expect(resultColor('C')).toBe('#666666');
+  it('Cならtext-gray-600', () => {
+    expect(resultColor('C')).toBe('text-gray-600');
   });
 
-  it('その他は#000000', () => {
-    expect(resultColor('D')).toBe('#000000');
+  it('その他はtext-black', () => {
+    expect(resultColor('X')).toBe('text-black');
   });
 });
