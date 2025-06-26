@@ -12,9 +12,8 @@ describe('Resultコンポーネント', () => {
     const resultElement = screen.getByText("S")
     expect(resultElement).toBeInTheDocument()
 
-    expect(resultElement).toHaveStyle({
-      color: '#ff0000',
-    })
+    // Sの場合はtext-red-500クラスが適用されることを確認
+    expect(resultElement).toHaveClass('text-red-500')
   })
 
   it('propsがAの場合', () => {
@@ -25,9 +24,8 @@ describe('Resultコンポーネント', () => {
     const resultElement = screen.getByText("A")
     expect(resultElement).toBeInTheDocument()
 
-    expect(resultElement).toHaveStyle({
-      color: '#0000ff',
-    })
+    // Aの場合はtext-blue-500クラスが適用されることを確認
+    expect(resultElement).toHaveClass('text-blue-500')
   })
 
   it('propsがBの場合', () => {
@@ -38,9 +36,8 @@ describe('Resultコンポーネント', () => {
     const resultElement = screen.getByText("B")
     expect(resultElement).toBeInTheDocument()
 
-    expect(resultElement).toHaveStyle({
-      color: '#00ff00',
-    })
+    // Bの場合はtext-green-500クラスが適用されることを確認
+    expect(resultElement).toHaveClass('text-green-500')
   })
 
   it('propsがCの場合', () => {
@@ -51,9 +48,8 @@ describe('Resultコンポーネント', () => {
     const resultElement = screen.getByText("C")
     expect(resultElement).toBeInTheDocument()
 
-    expect(resultElement).toHaveStyle({
-      color: '#666666',
-    })
+    // Cの場合はtext-gray-600クラスが適用されることを確認
+    expect(resultElement).toHaveClass('text-gray-600')
   })
 
   

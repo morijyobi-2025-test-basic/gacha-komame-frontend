@@ -1,15 +1,15 @@
 const resultColor = (result) => {
   switch (result) {
     case "S":
-      return "#ff0000";
+      return "text-red-500";
     case "A":
-      return "#0000ff";
+      return "text-blue-500";
     case "B":
-      return "#00ff00";
+      return "text-green-500";
     case "C":
-      return "#666666";
+      return "text-gray-600";
     default:
-      return "#000000";
+      return "text-black";
   } 
 }
 
