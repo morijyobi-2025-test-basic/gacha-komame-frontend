@@ -2,23 +2,23 @@ import { describe, it, expect } from 'vitest';
 import resultColor from '../src/libs/resultColor.js';
 
 describe('resultColor', () => {
-  it('Sならtext-red-500', () => {
-    expect(resultColor('S')).toBe('text-red-500');
+  it('大吉ならtext-red-600', () => {
+    expect(resultColor('大吉')).toBe('text-red-600');
   });
 
-  it('Aならtext-blue-500', () => {
-    expect(resultColor('A')).toBe('text-blue-500');
+  it('吉ならtext-yellow-500', () => {
+    expect(resultColor('吉')).toBe('text-yellow-500');
   });
 
-  it('Bならtext-green-500', () => {
-  expect(resultColor('B')).toBe('text-green-500');
+  it('中吉ならtext-indigo-500', () => {
+  expect(resultColor('中吉')).toBe('text-indigo-500');
   });
 
-  it('Cならtext-gray-600', () => {
-    expect(resultColor('C')).toBe('text-gray-600');
+  it('小吉ならtext-gray-700', () => {
+    expect(resultColor('小吉')).toBe('text-gray-700');
   });
 
-  it('その他はtext-black', () => {
-    expect(resultColor('X')).toBe('text-black');
+  it('凶ならtext-black', () => {
+    expect(resultColor('凶')).toBe('text-black');
   });
 });

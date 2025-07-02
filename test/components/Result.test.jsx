@@ -4,53 +4,38 @@ import { render, screen } from '@testing-library/react'
 import Result from '../../src/components/Result'
 
 describe('Resultコンポーネント', () => {
-  it('propsがSの場合', () => {
-    // Resultコンポーネントのpropsが {result: "S"} である場合をレンダリング
-    render(<Result result={{result: "S"}} />)
-    
-    // 画面上に"S"が表示されていることを確認
-    const resultElement = screen.getByText("S")
+  it('propsが大吉の場合', () => {
+    render(<Result result={{result: "大吉"}} />)
+    const resultElement = screen.getByText("大吉")
     expect(resultElement).toBeInTheDocument()
-
-    // Sの場合はtext-red-500クラスが適用されることを確認
-    expect(resultElement).toHaveClass('text-red-500')
+    expect(resultElement).toHaveClass('text-red-600')
   })
 
-  it('propsがAの場合', () => {
-    // Resultコンポーネントのpropsが {result: "A"} である場合をレンダリング
-    render(<Result result={{result: "A"}} />)
-    
-    // 画面上に"A"が表示されていることを確認
-    const resultElement = screen.getByText("A")
+  it('propsが吉の場合', () => {
+    render(<Result result={{result: "吉"}} />)
+    const resultElement = screen.getByText("吉")
     expect(resultElement).toBeInTheDocument()
-
-    // Aの場合はtext-blue-500クラスが適用されることを確認
-    expect(resultElement).toHaveClass('text-blue-500')
+    expect(resultElement).toHaveClass('text-yellow-500')
   })
 
-  it('propsがBの場合', () => {
-    // Resultコンポーネントのpropsが {result: "B"} である場合をレンダリング
-    render(<Result result={{result: "B"}} />)
-    
-    // 画面上に"B"が表示されていることを確認
-    const resultElement = screen.getByText("B")
+  it('propsが中吉の場合', () => {
+    render(<Result result={{result: "中吉"}} />)
+    const resultElement = screen.getByText("中吉")
     expect(resultElement).toBeInTheDocument()
-
-    // Bの場合はtext-green-500クラスが適用されることを確認
-    expect(resultElement).toHaveClass('text-green-500')
+    expect(resultElement).toHaveClass('text-indigo-500')
   })
 
-  it('propsがCの場合', () => {
-    // Resultコンポーネントのpropsが {result: "C"} である場合をレンダリング
-    render(<Result result={{result: "C"}} />)
-    
-    // 画面上に"C"が表示されていることを確認
-    const resultElement = screen.getByText("C")
+  it('propsが小吉の場合', () => {
+    render(<Result result={{result: "小吉"}} />)
+    const resultElement = screen.getByText("小吉")
     expect(resultElement).toBeInTheDocument()
-
-    // Cの場合はtext-gray-600クラスが適用されることを確認
-    expect(resultElement).toHaveClass('text-gray-600')
+    expect(resultElement).toHaveClass('text-gray-700')
   })
 
-  
+  it('propsが凶の場合', () => {
+    render(<Result result={{result: "凶"}} />)
+    const resultElement = screen.getByText("凶")
+    expect(resultElement).toBeInTheDocument()
+    expect(resultElement).toHaveClass('text-black')
+  })
 })
